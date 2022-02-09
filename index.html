@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <nav class="menu">
+        <ul>
+          <a href="index.html">Crear usuario</a></li>
+          <a href="verUsuario.html">Ver usuario</a>
+          <a href="consultarUsuarios.html">Consultar usuarios</a>
+          <a href="editarUsuario.html">Editar usuario</a>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="containerDelFormulario">
+      <h1>Nuevo usuario</h1>
+      <div class="nombres">
+        <div class="div">
+          <label for="primerNombre">Nombre:</label>
+        </div>
+        <div class="div">
+          <input type="text" name="primerNombre" id="primerNombre" required>
+        </div>
+        <div class="div">
+          <label for="segundoNombre">Segundo nombre:</label>
+        </div>
+        <div class="div">
+          <input type="text" name="segundoNombre" id="segundoNombre">
+        </div>
+      </div>
+
+      <div class="apellidos">
+        <div class="div">
+          <label for="primerApellido">Primer apellido:</label>
+        </div>
+        <div class="div">
+          <input type="text" name="primerApellido" id="primerApellido" required>
+        </div>
+        <div class="div">
+          <label for="segundoApellido">Segundo apellido:</label>
+        </div>
+        <div class="div">
+          <input type="text" name="segundoApellido" id="segundoApellido" required>
+        </div>
+      </div>
+
+      <div class="cedulaCelular">
+          <div class="div">
+            <label for="numCedula">No. cedula:</label>
+          </div>
+          <div class="div">
+            <input type="number" name="numCedula" id="numCedula" required>
+          </div>
+          <div class="div">
+            <label for="numCelular">No. celular:</label>
+          </div>
+          <div class="div">
+            <input type="number" name="numCelular" id="numCelular">
+          </div>
+      </div>
+
+      <div class="edadDireccion">
+        <div class="div">
+          <label for="edad">Edad:</label>
+        </div>
+        <div class="div">
+          <input type="number" name="edad" id="edad" required>
+        </div>
+        <div class="div">
+          <label for="direccion">Direccion:</label>
+        </div>
+        <div class="div">
+          <input type="text" name="direccion" id="direccion" required>
+        </div>
+      </div>
+
+      <div class="usuarioCorreo">
+        <div class="div">
+          <label for="nombreUsuario">Nombre de usuario:</label>
+        </div>
+        <div class="div">
+          <input type="text" name="nombreUsuario" id="nombreUsuario" required>
+        </div>
+        <div class="div">
+          <label for="correo">Correo electronico:</label>
+        </div>
+        <div class="div">
+          <input type="email" name="correo" id="correo" required>
+        </div>
+      </div>
+
+      <div class="idiomasSexo">
+        <div>
+          <fieldset>
+            <legend>Idiomas:</legend>
+              <label for="ingles">Ingles</label>
+              <input type="checkbox" id="ingles" value="ingles" class="valores">
+              <label for="espanol">Español</label>
+              <input type="checkbox" id="espanol" value="espanol" class="valores">
+              <label for="frances">Frances</label>
+              <input type="checkbox" id="frances" value="frances" class="valores">
+              <label for="aleman">Aleman</label>
+              <input type="checkbox" id="aleman" value="aleman" class="valores">
+              <label for="italiano">Italiano</label>
+              <input type="checkbox" id="italiano" value="italiano" class="valores">
+          </fieldset>
+        </div>
+        <div>
+          <form>
+            <fieldset>
+              <legend>Sexo:</legend>
+                <label>
+                  <input type="radio" name="sexo" value="masculino"> Masculino
+                </label>
+                <label>
+                    <input type="radio" name="sexo" value="femenino"> Femenino
+                </label>
+                <label>
+                    <input type="radio" name="sexo" value="otro"> Otro
+                </label>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      <div class="estratoEstadoCivil">
+        <div class="div">
+          <label for="estadoCivil">Estado civil:</label>
+        </div>
+        <div class="div">
+          <input type="text" name="estadoCivil" id="estadoCivil" required>
+        </div>
+        <div class="div">
+          <label for="estrato">Estrato:</label>
+        </div>
+        <div class="div">
+          <select name="select" name="estrato" id="estrato" required>
+            <option value="Estrato1">Estrato 1     </option>
+            <option value="Estrato2">Estrato 2     </option>
+            <option value="Estrato3">Estrato 3     </option>
+          </select>
+        </div>
+      </div>
+      <button class="registro" onclick="registrarDatosUsuario()">Registrarse</button>
+      <button class="cancelar" onclick="cancelar()">Cancelar</button>
+    </div>
+  <script src="index.js"></script>
+  </body>
+  </html>
