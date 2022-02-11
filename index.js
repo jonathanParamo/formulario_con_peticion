@@ -1,17 +1,18 @@
 const registrarDatosUsuario = () => {
-  let primerNombre = document.getElementById("primerNombre").value;
-  let segundoNombre = document.getElementById("segundoNombre").value;
-  let primerApellido = document.getElementById("primerApellido").value;
-  let segundoApellido = document.getElementById("segundoApellido").value;
-  let numCedula = document.getElementById("numCedula").value;
-  let numCelular = document.getElementById("numCelular").value;
-  let edad = document.getElementById("edad").value;
-  let direccion = document.getElementById("direccion").value;
-  let nombreUsuario = document.getElementById("nombreUsuario").value;
-  let correo = document.getElementById("correo").value;
-  let estadoCivil = document.getElementById("estadoCivil").value;
-  let estrato = document.getElementById("estrato").value;
-  let checks = document.getElementsByClassName("valores").value;
+  const primerNombre = document.getElementById("primerNombre").value;
+  const segundoNombre = document.getElementById("segundoNombre").value;
+  const primerApellido = document.getElementById("primerApellido").value;
+  const segundoApellido = document.getElementById("segundoApellido").value;
+  const numCedula = document.getElementById("numCedula").value;
+  const numCelular = document.getElementById("numCelular").value;
+  const edad = document.getElementById("edad").value;
+  const direccion = document.getElementById("direccion").value;
+  const nombreUsuario = document.getElementById("nombreUsuario").value;
+  const correo = document.getElementById("correo").value;
+  const estadoCivil = document.getElementById("estadoCivil").value;
+  const estrato = document.getElementById("estrato").value;
+  const idioma = checks();
+  const sexo = document.querySelector("input[name=sexo]:checked").value;
 
   const persona = {
     primerNombre,
@@ -26,43 +27,45 @@ const registrarDatosUsuario = () => {
     correo,
     estadoCivil,
     estrato,
-    checks
+    idioma,
+    sexo
   }
 
-console.log(persona)
-
-
-  primerNombre = document.getElementById("primerNombre").value = "";
-  segundoNombre = document.getElementById("segundoNombre").value = "";
-  primerApellido = document.getElementById("primerApellido").value = "";
-  segundoApellido = document.getElementById("segundoApellido").value = "";
-  numCedula = document.getElementById("numCedula").value = "";
-  numCelular = document.getElementById("numCelular").value = "";
-  edad = document.getElementById("edad").value = "";
-  direccion = document.getElementById("direccion").value = "";
-  nombreUsuario = document.getElementById("nombreUsuario").value = "";
-  correo = document.getElementById("correo").value = "";
-  estadoCivil = document.getElementById("estadoCivil").value = "";
-  estrato = document.getElementById("estrato").value = "";
-  checks = document.getElementsByClassName("valores").value;
+  cancelar();
 }
 
-
-const cancelar = (persona) => {
-  primerNombre = document.getElementById("primerNombre").value = "";
-  segundoNombre = document.getElementById("segundoNombre").value = "";
-  primerApellido = document.getElementById("primerApellido").value = "";
-  segundoApellido = document.getElementById("segundoApellido").value = "";
-  numCedula = document.getElementById("numCedula").value = "";
-  numCelular = document.getElementById("numCelular").value = "";
-  edad = document.getElementById("edad").value = "";
-  direccion = document.getElementById("direccion").value = "";
-  nombreUsuario = document.getElementById("nombreUsuario").value = "";
-  correo = document.getElementById("correo").value = "";
-  estadoCivil = document.getElementById("estadoCivil").value = "";
-  estrato = document.getElementById("estrato").value = ";"
+const cancelar = () => {
+  document.getElementById("primerNombre").value = "";
+  document.getElementById("segundoNombre").value = "";
+  document.getElementById("primerApellido").value = "";
+  document.getElementById("segundoApellido").value = "";
+  document.getElementById("numCedula").value = "";
+  document.getElementById("numCelular").value = "";
+  document.getElementById("edad").value = "";
+  document.getElementById("direccion").value = "";
+  document.getElementById("nombreUsuario").value = "";
+  document.getElementById("correo").value = "";
+  document.getElementById("estadoCivil").value = "";
+  document.getElementById("estrato").value = "";
 }
 
 const checks = () => {
-  let ingles = document.getElementById("ingles").value;
+  let idiomas = [];
+  if (document.getElementById('ingles').checked) {
+    idiomas.push("ingles")
+  }
+  if (document.getElementById('espanol').checked) {
+    idiomas.push('espanol')
+  }
+  if (document.getElementById('italiano').checked) {
+    idiomas.push("italiano")
+  }
+  if (document.getElementById('frances').checked) {
+    idiomas.push('frances')
+  }
+  if (document.getElementById('aleman').checked) {
+    idiomas.push("aleman")
+  }
+  return idiomas;
 }
+

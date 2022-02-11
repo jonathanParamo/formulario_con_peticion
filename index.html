@@ -57,13 +57,13 @@
             <label for="numCedula">No. cedula:</label>
           </div>
           <div class="div">
-            <input type="number" name="numCedula" id="numCedula" required>
+            <input type="number" name="numCedula" id="numCedula" required />
           </div>
           <div class="div">
-            <label for="numCelular">No. celular:</label>
+            <label for="numCelular">Telefono:</label>
           </div>
           <div class="div">
-            <input type="number" name="numCelular" id="numCelular">
+            <input type="number" name="numCelular" id="numCelular" />
           </div>
       </div>
 
@@ -72,13 +72,13 @@
           <label for="edad">Edad:</label>
         </div>
         <div class="div">
-          <input type="number" name="edad" id="edad" required>
+          <input type="number" name="edad" id="edad" required />
         </div>
         <div class="div">
           <label for="direccion">Direccion:</label>
         </div>
         <div class="div">
-          <input type="text" name="direccion" id="direccion" required>
+          <input type="text" name="direccion" id="direccion" required />
         </div>
       </div>
 
@@ -87,13 +87,13 @@
           <label for="nombreUsuario">Nombre de usuario:</label>
         </div>
         <div class="div">
-          <input type="text" name="nombreUsuario" id="nombreUsuario" required>
+          <input type="text" name="nombreUsuario" id="nombreUsuario" required />
         </div>
         <div class="div">
           <label for="correo">Correo electronico:</label>
         </div>
         <div class="div">
-          <input type="email" name="correo" id="correo" required>
+          <input type="email" name="correo" id="correo" required />
         </div>
       </div>
 
@@ -101,16 +101,16 @@
         <div>
           <fieldset>
             <legend>Idiomas:</legend>
-              <label for="ingles">Ingles</label>
-              <input type="checkbox" id="ingles" value="ingles" class="valores">
-              <label for="espanol">Español</label>
-              <input type="checkbox" id="espanol" value="espanol" class="valores">
-              <label for="frances">Frances</label>
-              <input type="checkbox" id="frances" value="frances" class="valores">
-              <label for="aleman">Aleman</label>
-              <input type="checkbox" id="aleman" value="aleman" class="valores">
-              <label for="italiano">Italiano</label>
-              <input type="checkbox" id="italiano" value="italiano" class="valores">
+            <input type="checkbox" id="ingles" value="ingles" class="valores" />
+            <label for="ingles">Ingles</label>
+            <input type="checkbox" id="espanol" value="espanol" class="valores" />
+            <label for="espanol">Español</label>
+            <input type="checkbox" id="frances" value="frances" class="valores" />
+            <label for="frances">Frances</label>
+            <input type="checkbox" id="aleman" value="aleman" class="valores" />
+            <label for="aleman">Aleman</label>
+            <input type="checkbox" id="italiano" value="italiano" class="valores" />
+            <label for="italiano">Italiano</label>
           </fieldset>
         </div>
         <div>
@@ -118,13 +118,13 @@
             <fieldset>
               <legend>Sexo:</legend>
                 <label>
-                  <input type="radio" name="sexo" value="masculino"> Masculino
+                  <input type="radio" name="sexo" value="masculino" /> Masculino
                 </label>
                 <label>
-                    <input type="radio" name="sexo" value="femenino"> Femenino
+                    <input type="radio" name="sexo" value="femenino" /> Femenino
                 </label>
                 <label>
-                    <input type="radio" name="sexo" value="otro"> Otro
+                    <input type="radio" name="sexo" value="otro" /> Otro
                 </label>
             </fieldset>
           </form>
@@ -136,16 +136,22 @@
           <label for="estadoCivil">Estado civil:</label>
         </div>
         <div class="div">
-          <input type="text" name="estadoCivil" id="estadoCivil" required>
+          <select name="select" name="estadoCivil" id="estadoCivil" required>
+            <option value="soltero">Soltero </option>
+            <option value="casado">Casado </option>
+            <option value="union_libre">Union libre </option>
+            <option value="Viudo">Viudo </option>
+            <option value="otro">Otro </option>
+          </select>
         </div>
         <div class="div">
           <label for="estrato">Estrato:</label>
         </div>
         <div class="div">
           <select name="select" name="estrato" id="estrato" required>
-            <option value="Estrato1">Estrato 1     </option>
-            <option value="Estrato2">Estrato 2     </option>
-            <option value="Estrato3">Estrato 3     </option>
+            <option value="estrato1">Estrato 1 </option>
+            <option value="estrato2">Estrato 2 </option>
+            <option value="estrato3">Estrato 3 </option>
           </select>
         </div>
       </div>
