@@ -3,15 +3,16 @@ const registrarDatosUsuario = () => {
   const segundoNombre = document.getElementById("segundoNombre").value;
   const primerApellido = document.getElementById("primerApellido").value;
   const segundoApellido = document.getElementById("segundoApellido").value;
-  const numCedula = document.getElementById("numCedula").value;
-  const numCelular = document.getElementById("numCelular").value;
-  const edad = document.getElementById("edad").value;
+  const cedula = parseFloat(document.getElementById("cedula").value);
+  const telefono = parseFloat(document.getElementById("telefono").value);
+  const edad = parseFloat(document.getElementById("edad").value);
   const direccion = document.getElementById("direccion").value;
-  const nombreUsuario = document.getElementById("nombreUsuario").value;
+  const userName = document.getElementById("userName").value;
   const correo = document.getElementById("correo").value;
   const estadoCivil = document.getElementById("estadoCivil").value;
   const estrato = document.getElementById("estrato").value;
   const idioma = checks();
+  const fechaNacimiento = document.getElementById("fechaNacimiento").value;
   const sexo = document.querySelector("input[name=sexo]:checked").value;
 
   const persona = {
@@ -19,18 +20,19 @@ const registrarDatosUsuario = () => {
     segundoNombre,
     primerApellido,
     segundoApellido,
-    numCedula,
-    numCelular,
+    cedula,
+    telefono,
     edad,
     direccion,
-    nombreUsuario,
+    userName,
     correo,
     estadoCivil,
     estrato,
     idioma,
-    sexo
+    sexo,
+    fechaNacimiento
   }
-
+  registrarPersona(persona)
   cancelar();
 }
 
@@ -39,33 +41,49 @@ const cancelar = () => {
   document.getElementById("segundoNombre").value = "";
   document.getElementById("primerApellido").value = "";
   document.getElementById("segundoApellido").value = "";
-  document.getElementById("numCedula").value = "";
-  document.getElementById("numCelular").value = "";
+  document.getElementById("cedula").value = "";
+  document.getElementById("telefono").value = "";
   document.getElementById("edad").value = "";
   document.getElementById("direccion").value = "";
-  document.getElementById("nombreUsuario").value = "";
+  document.getElementById("userName").value = "";
   document.getElementById("correo").value = "";
   document.getElementById("estadoCivil").value = "";
   document.getElementById("estrato").value = "";
+  document.getElementById("fechaNacimiento").value = "";
 }
 
 const checks = () => {
-  let idiomas = [];
+  let idioma = [];
   if (document.getElementById('ingles').checked) {
-    idiomas.push("ingles")
+    idioma.push("ingles")
   }
   if (document.getElementById('espanol').checked) {
-    idiomas.push('espanol')
+    idioma.push('espanol')
   }
   if (document.getElementById('italiano').checked) {
-    idiomas.push("italiano")
+    idioma.push("italiano")
   }
   if (document.getElementById('frances').checked) {
-    idiomas.push('frances')
+    idioma.push('frances')
   }
   if (document.getElementById('aleman').checked) {
-    idiomas.push("aleman")
+    idioma.push("aleman")
   }
-  return idiomas;
+  return idioma;
 }
 
+
+const registrarPersona = (persona) => {
+
+let url = 'https://safe-reef-90017.herokuapp.com/usuarios/crear';
+
+fetch(url, {
+  method: 'POST',
+  body: JSON.stringify(persona),
+  headers:{
+    'Content-Type': 'application/json'
+  }
+}).then(res => res.json())
+.catch(error => console.error('Error:', error))
+.then(response => console.log('Success:', response));
+}
