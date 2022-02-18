@@ -15,6 +15,30 @@ const registrarDatosUsuario = () => {
   const fechaNacimiento = document.getElementById("fechaNacimiento").value;
   const sexo = document.querySelector("input[name=sexo]:checked").value;
 
+  if(primerNombre === ""){
+    alert('debe ingresar un nombre')
+  }
+
+  if(primerApellido === "" || segundoApellido === ""){
+    alert('debe ingresar los dos apellidos')
+  }
+
+  if(cedula === ""){
+    alert('debe ingresar un numero de cedula')
+  }
+
+  if(edad === "" || direccion === ""){
+    alert('debe ingresar una edad y/o direccion')
+  }
+
+  if(userName === "" || correo === ""){
+    alert('debe ingresar un nombre de usuario y/o correo electronico')
+  }
+
+  if(estadoCivil === "" || estrato === ""){
+    alert('debe ingresar su estado civil y/o estrato')
+  }
+
   const persona = {
     primerNombre,
     segundoNombre,
@@ -87,3 +111,4 @@ fetch(url, {
 .catch(error => console.error('Error:', error))
 .then(response => console.log('Success:', response));
 }
+
