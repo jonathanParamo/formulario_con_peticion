@@ -17,17 +17,36 @@ body {
   width: 80%;
   height: 40px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: end;
   background: #168aad;
   border-radius: 5px;
-  margin-bottom: 10px;
   box-shadow: 3px 3px 10px #34a0a4;
   margin-bottom: 20px;
 }
 
+.menu {
+  display: flex;
+}
+
+.crearUsuario {
+  width: 140px;
+}
+
+.verUsuario {
+  width: 140px;
+}
+
+.consultarUsuario {
+  width: 180px;
+}
+
+.editarUsuario {
+  width: 150px;
+}
+
 .nav a {
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
   color: #eee;
   margin-right: 40px;
@@ -118,6 +137,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: end;
+  margin-top: 8px;
 }
 
 .fechaNacimiento label {
@@ -133,7 +153,7 @@ body {
   box-shadow: 2px 2px 10px #94d2bd;
   transition: .7s;
   background: #a4ac86;
-  margin: 10px;
+  margin: 40px;
 }
 
 .registro:hover {
@@ -152,7 +172,7 @@ body {
   box-shadow: 2px 2px 10px #94d2bd;
   transition: .7s;
   background: #a4ac86;
-  margin: 10px
+  margin: 40px;
 }
 
 .cancelar:hover {
@@ -178,7 +198,6 @@ body {
     height: 40px;
     display: flex;
     background: #219ebc;
-    border-radius: 5px;
     box-shadow: 3px 3px 8px #0071b9;
     box-sizing: border-box;
   }
@@ -199,14 +218,14 @@ body {
   }
 
   .menu a {
-    font-size: 19px;
+    font-size: 17px;
     margin: 0px 10px;
     transition: .7s;
   }
 
   .menu a:hover {
     color: #e5e5e5;
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .containerDelFormulario {

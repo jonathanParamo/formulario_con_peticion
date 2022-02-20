@@ -17,26 +17,18 @@ const registrarDatosUsuario = () => {
 
   if(primerNombre === ""){
     alert('debe ingresar un nombre')
-  }
-
-  if(primerApellido === "" || segundoApellido === ""){
+  }else if(primerApellido === "" || segundoApellido === ""){
     alert('debe ingresar los dos apellidos')
-  }
-
-  if(cedula === ""){
+  }else if(cedula === ""){
     alert('debe ingresar un numero de cedula')
-  }
-
-  if(edad === "" || direccion === ""){
+  }else if(edad === "" || direccion === ""){
     alert('debe ingresar una edad y/o direccion')
-  }
-
-  if(userName === "" || correo === ""){
+  }else   if(userName === "" || correo === ""){
     alert('debe ingresar un nombre de usuario y/o correo electronico')
-  }
-
-  if(estadoCivil === "" || estrato === ""){
+  }else if(estadoCivil === "" || estrato === ""){
     alert('debe ingresar su estado civil y/o estrato')
+  }else{
+    return true
   }
 
   const persona = {
