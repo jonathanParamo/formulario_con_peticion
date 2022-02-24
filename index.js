@@ -3,11 +3,11 @@ const registrarDatosUsuario = () => {
   const segundoNombre = document.getElementById("segundoNombre").value;
   const primerApellido = document.getElementById("primerApellido").value;
   const segundoApellido = document.getElementById("segundoApellido").value;
-  const cedula = parseFloat(document.getElementById("cedula").value);
-  const telefono = parseFloat(document.getElementById("telefono").value);
-  const edad = parseFloat(document.getElementById("edad").value);
+  const cedula = document.getElementById("cedula").value;
+  const telefono = document.getElementById("telefono").value;
+  const edad = document.getElementById("edad").value;
   const direccion = document.getElementById("direccion").value;
-  const userName = document.getElementById("userName").value;
+  const nombreUsuario = document.getElementById("userName").value;
   const correo = document.getElementById("correo").value;
   const estadoCivil = document.getElementById("estadoCivil").value;
   const estrato = document.getElementById("estrato").value;
@@ -23,33 +23,33 @@ const registrarDatosUsuario = () => {
     alert('debe ingresar un numero de cedula')
   }else if(edad === "" || direccion === ""){
     alert('debe ingresar una edad y/o direccion')
-  }else   if(userName === "" || correo === ""){
+  }else if(nombreUsuario === "" || correo === ""){
     alert('debe ingresar un nombre de usuario y/o correo electronico')
   }else if(estadoCivil === "" || estrato === ""){
     alert('debe ingresar su estado civil y/o estrato')
   }else{
-    return true
+    const persona = {
+      primerNombre,
+      segundoNombre,
+      primerApellido,
+      segundoApellido,
+      cedula,
+      telefono,
+      edad,
+      direccion,
+      nombreUsuario,
+      correo,
+      estadoCivil,
+      estrato,
+      idioma,
+      sexo,
+      fechaNacimiento
+    }
+    registrarPersona(persona)
+    cancelar();
   }
 
-  const persona = {
-    primerNombre,
-    segundoNombre,
-    primerApellido,
-    segundoApellido,
-    cedula,
-    telefono,
-    edad,
-    direccion,
-    userName,
-    correo,
-    estadoCivil,
-    estrato,
-    idioma,
-    sexo,
-    fechaNacimiento
-  }
-  registrarPersona(persona)
-  cancelar();
+
 }
 
 const cancelar = () => {
