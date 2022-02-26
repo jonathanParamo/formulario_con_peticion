@@ -1,6 +1,6 @@
-.body {
-  width: 0;
-  height: 0;
+body {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -14,125 +14,91 @@
 }
 
 .nav {
-  width: 90%;
+  width: 80%;
   height: 40px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: end;
-  background: #0071c6;
+  background: #168aad;
   border-radius: 5px;
-  margin-bottom: 10px;
-  box-shadow: 3px 3px 8px #0071b9;
+  box-shadow: 3px 3px 10px #34a0a4;
   margin-bottom: 20px;
 }
 
+.menu {
+  display: flex;
+}
+
+.crearUsuario {
+  width: 140px;
+}
+
+.verUsuario {
+  width: 140px;
+}
+
+.consultarUsuario {
+  width: 180px;
+}
+
+.editarUsuario {
+  width: 150px;
+}
+
 .nav a {
-  margin: 2px 20px;
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
   color: #eee;
+  margin-right: 40px;
+  transition: .7s;
+}
+
+.nav a:hover {
+  color: #e5e5e5;
+  font-size: 17px;
 }
 
 .containerDelFormulario {
   width: 80%;
-  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #0071b9;
+  background: #184e77;
   color: #eee;
   box-sizing: border-box;
   border-radius: 5px;
-  box-shadow:  8px 10px 12px #002c8d;
-}
-@media (max-width:320px){
-  .containerDelFormulario {
-    width: 80%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #0071b9;
-    color: #eee;
-    box-sizing: border-box;
-    border-radius: 5px;
-    box-shadow:  8px 10px 12px #002c8d;
-  }
-}
-.nombres {
-  width: 75%;
-  height: 30px;
-  column-count:4;
-  column-gap: 3em;
-  background: #0071b9;
-  margin: 10px;
-  text-align: end;
+  box-shadow:  8px 10px 12px #34a0a4;
 }
 
-@media (max-width:720px){
-  .nombres {
-    width: 75%;
-    height: 20px;
-    column-count:2;
-    column-gap: 1em;
-    background: #0071b9;
-    margin: 5px;
-    text-align: end;
-    display: flex;
-    flex-direction: column;
-  }
+
+.nombres {
+  width: 75%;
+  column-count:4;
+  column-gap: 3em;
+  margin: 10px;
+  text-align: end;
+  margin-top: 40px;
 }
 
 .apellidos {
   width: 75%;
-  height: 30px;
   column-count:4;
   column-gap: 3em;
   margin: 10px;
   text-align: end;
-}
-
-@media (max-width:720px) {
-  .apellidos {
-    width: 75%;
-    height: 20px;
-    column-count:2;
-    column-gap: 1em;
-    margin: 5px;
-    text-align: end;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-  }
 }
 
 .cedulaCelular {
   width: 75%;
-  height: 30px;
   column-count:4;
   column-gap: 3em;
   margin: 10px;
   text-align: end;
 }
 
-@media (max-width:720px) {
-  .cedulaCelular {
-    width: 75%;
-    height: 20px;
-    column-count:2;
-    column-gap: 1em;
-    margin: 5px;
-    text-align: end;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 .edadDireccion {
   width: 75%;
-  height: 30px;
   column-count:4;
   column-gap: 3em;
   margin: 10px;
@@ -141,7 +107,6 @@
 
 .usuarioCorreo {
   width: 75%;
-  height: 30px;
   column-count:4;
   column-gap: 3em;
   margin: 10px;
@@ -150,7 +115,6 @@
 
 .idiomasSexo {
   width: 75%;
-  height: 50px;
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
@@ -160,9 +124,303 @@
 
 .estratoEstadoCivil {
   width: 75%;
-  height: 50px;
-  column-count:4;
+  column-count: 4;
   column-gap: 3em;
-  margin: 10px;
+  margin: 6px;
   text-align: end;
+}
+
+.fechaNacimiento {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: end;
+  margin-top: 8px;
+}
+
+.fechaNacimiento label {
+  margin-right: 20px;
+}
+
+.registro {
+  width: 120px;
+  height: 25px;
+  color: black;
+  border: none;
+  border-radius: 5px;;
+  box-shadow: 2px 2px 10px #94d2bd;
+  transition: .7s;
+  background: #a4ac86;
+  margin: 40px;
+}
+
+.registro:hover {
+  cursor: pointer;
+  box-shadow: none;
+  background: #14213d;
+  color: #eee;
+}
+
+.cancelar {
+  width: 120px;
+  height: 25px;
+  color: black;
+  border: none;
+  border-radius: 5px;;
+  box-shadow: 2px 2px 10px #94d2bd;
+  transition: .7s;
+  background: #a4ac86;
+  margin: 40px;
+}
+
+.cancelar:hover {
+  cursor: pointer;
+  box-shadow: none;
+  background: #14213d;
+  color: #eee;
+}
+
+input {
+  outline: none;
+}
+
+@media (max-width: 720px) {
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .nav {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    background: #219ebc;
+    box-shadow: 3px 3px 8px #0071b9;
+    box-sizing: border-box;
+  }
+
+
+  .nav a {
+    text-decoration: none;
+    color: #eee;
+  }
+
+  .menu {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .menu a {
+    font-size: 17px;
+    margin: 0px 10px;
+    transition: .7s;
+  }
+
+  .menu a:hover {
+    color: #e5e5e5;
+    font-size: 15px;
+  }
+
+  .containerDelFormulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #184e77;
+    color: #eee;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow:  8px 10px 12px #002c8d;
+  }
+
+  .nombres {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .primerNombre {
+    width: 90%;
+    column-count: 2;
+    column-gap: 2rem;
+    margin: 5px;
+  }
+
+  .segundoNombre {
+    width: 90%;
+    column-count: 2;
+    column-gap: 2rem;
+    margin-bottom: 3px;
+  }
+
+  .apellidos {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .primerApellido {
+    width: 90%;
+    column-count: 2;
+    column-gap: 2rem;
+    margin: 3px;
+  }
+
+  .segundoApellido {
+    width: 90%;
+    column-count: 2;
+    column-gap: 2rem;
+    margin: 3px;
+  }
+
+  .cedulaCelular {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+    margin: 0;
+  }
+
+  .cedula {
+    width: 90%;
+    column-count: 2;
+    column-gap: 2rem;
+    margin: 3px;
+  }
+
+  .telefono {
+    width: 90%;
+    column-count: 2;
+    column-gap: 2rem;
+    margin: 3px;
+  }
+
+  .edadDireccion {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+    margin: 0;
+  }
+
+  .edad {
+    width: 90%;
+    column-count: 2;
+    column-gap: 2rem;
+    margin: 3px;
+  }
+
+  .direccion {
+    width: 90%;
+    column-count: 2;
+    column-gap: 2rem;
+    margin: 3px;
+  }
+
+  .usuarioCorreo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+    margin: 0;
+  }
+
+  .nombreUsuario {
+    width: 90%;
+    column-count: 2;
+    column-gap: 2rem;
+    margin: 3px;
+  }
+
+  .correoElectronico {
+    width: 90%;
+    column-count: 2;
+    column-gap: 2rem;
+    margin: 3px;
+  }
+
+  .idiomasSexo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+    margin: 0;
+  }
+
+  .idiomas {
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+
+  .sexo {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .estratoEstadoCivil {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+    margin: 0;
+  }
+
+  .estadoCivil {
+    width: 80%;
+    column-count: 2;
+    column-gap: 2rem;
+    margin: 3px;
+    margin: 2px;
+  }
+
+  .estadoCivil select {
+    width: 80%;
+  }
+
+  .estrato {
+    width: 80%;
+    column-count: 2;
+    column-gap: 2rem;
+    margin-top: 5px;
+    margin-top: 3px;
+  }
+
+  .estrato select {
+    width: 80%;
+  }
+
+  .fechaNacimiento {
+    width: 80%;
+    column-count: 2;
+    column-gap: 3rem;
+  }
+
 }

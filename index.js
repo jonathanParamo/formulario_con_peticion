@@ -1,68 +1,106 @@
 const registrarDatosUsuario = () => {
-  let primerNombre = document.getElementById("primerNombre").value;
-  let segundoNombre = document.getElementById("segundoNombre").value;
-  let primerApellido = document.getElementById("primerApellido").value;
-  let segundoApellido = document.getElementById("segundoApellido").value;
-  let numCedula = document.getElementById("numCedula").value;
-  let numCelular = document.getElementById("numCelular").value;
-  let edad = document.getElementById("edad").value;
-  let direccion = document.getElementById("direccion").value;
-  let nombreUsuario = document.getElementById("nombreUsuario").value;
-  let correo = document.getElementById("correo").value;
-  let estadoCivil = document.getElementById("estadoCivil").value;
-  let estrato = document.getElementById("estrato").value;
-  let checks = document.getElementsByClassName("valores").value;
+  const primerNombre = document.getElementById("primerNombre").value;
+  const segundoNombre = document.getElementById("segundoNombre").value;
+  const primerApellido = document.getElementById("primerApellido").value;
+  const segundoApellido = document.getElementById("segundoApellido").value;
+  const cedula = document.getElementById("cedula").value;
+  const telefono = document.getElementById("telefono").value;
+  const edad = document.getElementById("edad").value;
+  const direccion = document.getElementById("direccion").value;
+  const nombreUsuario = document.getElementById("userName").value;
+  const correo = document.getElementById("correo").value;
+  const estadoCivil = document.getElementById("estadoCivil").value;
+  const estrato = document.getElementById("estrato").value;
+  const idioma = checks();
+  const fechaNacimiento = document.getElementById("fechaNacimiento").value;
+  const sexo = document.querySelector("input[name=sexo]:checked").value;
 
-  const persona = {
-    primerNombre,
-    segundoNombre,
-    primerApellido,
-    segundoApellido,
-    numCedula,
-    numCelular,
-    edad,
-    direccion,
-    nombreUsuario,
-    correo,
-    estadoCivil,
-    estrato,
-    checks
+  if(primerNombre === ""){
+    alert('debe ingresar un nombre')
+  }else if(primerApellido === "" || segundoApellido === ""){
+    alert('debe ingresar los dos apellidos')
+  }else if(cedula === ""){
+    alert('debe ingresar un numero de cedula')
+  }else if(edad === "" || direccion === ""){
+    alert('debe ingresar una edad y/o direccion')
+  }else if(nombreUsuario === "" || correo === ""){
+    alert('debe ingresar un nombre de usuario y/o correo electronico')
+  }else if(estadoCivil === "" || estrato === ""){
+    alert('debe ingresar su estado civil y/o estrato')
+  }else{
+    const persona = {
+      primerNombre,
+      segundoNombre,
+      primerApellido,
+      segundoApellido,
+      cedula,
+      telefono,
+      edad,
+      direccion,
+      nombreUsuario,
+      correo,
+      estadoCivil,
+      estrato,
+      idioma,
+      sexo,
+      fechaNacimiento
+    }
+    registrarPersona(persona)
+    cancelar();
   }
 
-console.log(persona)
 
-
-  primerNombre = document.getElementById("primerNombre").value = "";
-  segundoNombre = document.getElementById("segundoNombre").value = "";
-  primerApellido = document.getElementById("primerApellido").value = "";
-  segundoApellido = document.getElementById("segundoApellido").value = "";
-  numCedula = document.getElementById("numCedula").value = "";
-  numCelular = document.getElementById("numCelular").value = "";
-  edad = document.getElementById("edad").value = "";
-  direccion = document.getElementById("direccion").value = "";
-  nombreUsuario = document.getElementById("nombreUsuario").value = "";
-  correo = document.getElementById("correo").value = "";
-  estadoCivil = document.getElementById("estadoCivil").value = "";
-  estrato = document.getElementById("estrato").value = "";
-  checks = document.getElementsByClassName("valores").value;
 }
 
-
-const cancelar = (persona) => {
-  primerNombre = document.getElementById("primerNombre").value = "";
-  segundoNombre = document.getElementById("segundoNombre").value = "";
-  primerApellido = document.getElementById("primerApellido").value = "";
-  segundoApellido = document.getElementById("segundoApellido").value = "";
-  numCedula = document.getElementById("numCedula").value = "";
-  numCelular = document.getElementById("numCelular").value = "";
-  edad = document.getElementById("edad").value = "";
-  direccion = document.getElementById("direccion").value = "";
-  nombreUsuario = document.getElementById("nombreUsuario").value = "";
-  correo = document.getElementById("correo").value = "";
-  estadoCivil = document.getElementById("estadoCivil").value = "";
-  estrato = document.getElementById("estrato").value = ";"
+const cancelar = () => {
+  document.getElementById("primerNombre").value = "";
+  document.getElementById("segundoNombre").value = "";
+  document.getElementById("primerApellido").value = "";
+  document.getElementById("segundoApellido").value = "";
+  document.getElementById("cedula").value = "";
+  document.getElementById("telefono").value = "";
+  document.getElementById("edad").value = "";
+  document.getElementById("direccion").value = "";
+  document.getElementById("userName").value = "";
+  document.getElementById("correo").value = "";
+  document.getElementById("estadoCivil").value = "";
+  document.getElementById("estrato").value = "";
+  document.getElementById("fechaNacimiento").value = "";
 }
 
 const checks = () => {
-  let ingles = document.getElementById("ingles").value;
+  let idioma = [];
+  if (document.getElementById('ingles').checked) {
+    idioma.push("ingles")
+  }
+  if (document.getElementById('espanol').checked) {
+    idioma.push('espanol')
+  }
+  if (document.getElementById('italiano').checked) {
+    idioma.push("italiano")
+  }
+  if (document.getElementById('frances').checked) {
+    idioma.push('frances')
+  }
+  if (document.getElementById('aleman').checked) {
+    idioma.push("aleman")
+  }
+  return idioma;
 }
+
+
+const registrarPersona = (persona) => {
+
+let url = 'https://safe-reef-90017.herokuapp.com/usuarios/crear';
+
+fetch(url, {
+  method: 'POST',
+  body: JSON.stringify(persona),
+  headers:{
+    'Content-Type': 'application/json'
+  }
+}).then(res => res.json())
+.catch(error => console.error('Error:', error))
+.then(response => console.log('Success:', response));
+}
+

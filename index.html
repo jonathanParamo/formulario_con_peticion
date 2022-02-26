@@ -11,120 +11,146 @@
   <div class="container">
     <div class="nav">
       <nav class="menu">
-        <ul>
-          <a href="index.html">Crear usuario</a></li>
+        <div class="crearUsuario">
+          <a href="index.html">Crear usuario</a>
+        </div>
+        <div class="verUsuario">
           <a href="verUsuario.html">Ver usuario</a>
+        </div>
+        <div class="consultarUsuario">
           <a href="consultarUsuarios.html">Consultar usuarios</a>
+        </div>
+        <div class="editarUsuario">
           <a href="editarUsuario.html">Editar usuario</a>
-        </ul>
+        </div>
       </nav>
     </div>
 
     <div class="containerDelFormulario">
-      <h1>Nuevo usuario</h1>
+
       <div class="nombres">
-        <div class="div">
-          <label for="primerNombre">Nombre:</label>
+        <div class="primerNombre">
+          <div class="div">
+            <label for="primerNombre">Nombre:</label>
+          </div>
+          <div class="div">
+            <input type="text" name="primerNombre" id="primerNombre" required>
+          </div>
         </div>
-        <div class="div">
-          <input type="text" name="primerNombre" id="primerNombre" required>
-        </div>
-        <div class="div">
-          <label for="segundoNombre">Segundo nombre:</label>
-        </div>
-        <div class="div">
-          <input type="text" name="segundoNombre" id="segundoNombre">
+        <div class="segundoNombre">
+          <div class="div">
+            <label for="segundoNombre">Segundo nombre:</label>
+          </div>
+          <div class="div">
+            <input type="text" name="segundoNombre" id="segundoNombre">
+          </div>
         </div>
       </div>
 
       <div class="apellidos">
-        <div class="div">
-          <label for="primerApellido">Primer apellido:</label>
+        <div class="primerApellido">
+          <div class="div">
+            <label for="primerApellido">Primer apellido:</label>
+          </div>
+          <div class="div">
+            <input type="text" name="primerApellido" id="primerApellido" required>
+          </div>
         </div>
-        <div class="div">
-          <input type="text" name="primerApellido" id="primerApellido" required>
-        </div>
-        <div class="div">
-          <label for="segundoApellido">Segundo apellido:</label>
-        </div>
-        <div class="div">
-          <input type="text" name="segundoApellido" id="segundoApellido" required>
+        <div class="segundoApellido">
+          <div class="div">
+            <label for="segundoApellido">Segundo apellido:</label>
+          </div>
+          <div class="div">
+            <input type="text" name="segundoApellido" id="segundoApellido" required>
+          </div>
         </div>
       </div>
 
       <div class="cedulaCelular">
+        <div class="cedula">
           <div class="div">
-            <label for="numCedula">No. cedula:</label>
+            <label for="cedula">No. cedula:</label>
           </div>
           <div class="div">
-            <input type="number" name="numCedula" id="numCedula" required>
+            <input type="number" name="cedula" id="cedula" required />
+          </div>
+        </div>
+        <div class="telefono">
+          <div class="div">
+            <label for="telefono">Telefono:</label>
           </div>
           <div class="div">
-            <label for="numCelular">No. celular:</label>
+            <input type="number" name="telefono" id="telefono" />
           </div>
-          <div class="div">
-            <input type="number" name="numCelular" id="numCelular">
-          </div>
+        </div>
       </div>
 
       <div class="edadDireccion">
-        <div class="div">
-          <label for="edad">Edad:</label>
+        <div class="edad">
+          <div class="div">
+            <label for="edad">Edad:</label>
+          </div>
+          <div class="div">
+            <input type="number" name="edad" id="edad" required />
+          </div>
         </div>
-        <div class="div">
-          <input type="number" name="edad" id="edad" required>
-        </div>
-        <div class="div">
-          <label for="direccion">Direccion:</label>
-        </div>
-        <div class="div">
-          <input type="text" name="direccion" id="direccion" required>
+        <div class="direccion">
+          <div class="div">
+            <label for="direccion">Direccion:</label>
+          </div>
+          <div class="div">
+            <input type="text" name="direccion" id="direccion" required />
+          </div>
         </div>
       </div>
 
       <div class="usuarioCorreo">
-        <div class="div">
-          <label for="nombreUsuario">Nombre de usuario:</label>
+        <div class="nombreUsuario">
+          <div class="div">
+            <label for="userName">Nombre de usuario:</label>
+          </div>
+          <div class="div">
+            <input type="text" name="userName" id="userName" required />
+          </div>
         </div>
-        <div class="div">
-          <input type="text" name="nombreUsuario" id="nombreUsuario" required>
-        </div>
-        <div class="div">
-          <label for="correo">Correo electronico:</label>
-        </div>
-        <div class="div">
-          <input type="email" name="correo" id="correo" required>
+        <div class="correoElectronico">
+          <div class="div">
+            <label for="correo">Correo electronico:</label>
+          </div>
+          <div class="div">
+            <input type="email" name="correo" id="correo" required />
+          </div>
         </div>
       </div>
 
       <div class="idiomasSexo">
-        <div>
+        <div class="idiomas">
           <fieldset>
             <legend>Idiomas:</legend>
-              <label for="ingles">Ingles</label>
-              <input type="checkbox" id="ingles" value="ingles" class="valores">
-              <label for="espanol">Español</label>
-              <input type="checkbox" id="espanol" value="espanol" class="valores">
-              <label for="frances">Frances</label>
-              <input type="checkbox" id="frances" value="frances" class="valores">
-              <label for="aleman">Aleman</label>
-              <input type="checkbox" id="aleman" value="aleman" class="valores">
-              <label for="italiano">Italiano</label>
-              <input type="checkbox" id="italiano" value="italiano" class="valores">
+            <input type="checkbox" id="ingles" value="ingles" class="valores" />
+            <label for="ingles">Ingles</label>
+            <input type="checkbox" id="espanol" value="espanol" class="valores" />
+            <label for="espanol">Español</label>
+            <input type="checkbox" id="frances" value="frances" class="valores" />
+            <label for="frances">Frances</label>
+            <input type="checkbox" id="aleman" value="aleman" class="valores" />
+            <label for="aleman">Aleman</label>
+            <input type="checkbox" id="italiano" value="italiano" class="valores" />
+            <label for="italiano">Italiano</label>
           </fieldset>
         </div>
-        <div>
+        <div class="sexo">
           <form>
             <fieldset>
               <legend>Sexo:</legend>
                 <label>
-                  <input type="radio" name="sexo" value="masculino"> Masculino
+                  <input type="radio" name="sexo" value="masculino" /> Masculino
                 </label>
                 <label>
-                    <input type="radio" name="sexo" value="femenino"> Femenino
+                    <input type="radio" name="sexo" value="femenino" /> Femenino
                 </label>
                 <label>
-                    <input type="radio" name="sexo" value="otro"> Otro
+                    <input type="radio" name="sexo" value="otro" checked/> Otro
                 </label>
             </fieldset>
           </form>
@@ -132,26 +158,48 @@
       </div>
 
       <div class="estratoEstadoCivil">
-        <div class="div">
-          <label for="estadoCivil">Estado civil:</label>
+        <div class="estadoCivil">
+          <div class="div">
+            <label for="estadoCivil">Estado civil:</label>
+          </div>
+          <div class="div">
+            <select name="select" name="estadoCivil" id="estadoCivil" required>
+              <option value="soltero">Soltero </option>
+              <option value="casado">Casado </option>
+              <option value="union_libre">Union libre </option>
+              <option value="viudo">Viudo </option>
+              <option value="otro">Otro </option>
+            </select>
+          </div>
         </div>
-        <div class="div">
-          <input type="text" name="estadoCivil" id="estadoCivil" required>
-        </div>
-        <div class="div">
-          <label for="estrato">Estrato:</label>
-        </div>
-        <div class="div">
-          <select name="select" name="estrato" id="estrato" required>
-            <option value="Estrato1">Estrato 1     </option>
-            <option value="Estrato2">Estrato 2     </option>
-            <option value="Estrato3">Estrato 3     </option>
-          </select>
+        <div class="estrato">
+          <div class="div">
+            <label for="estrato">Estrato:</label>
+          </div>
+          <div class="div">
+            <select name="select" name="estrato" id="estrato" required>
+              <option value="estrato1">Estrato 1 </option>
+              <option value="estrato2">Estrato 2 </option>
+              <option value="estrato3">Estrato 3 </option>
+            </select>
+          </div>
         </div>
       </div>
-      <button class="registro" onclick="registrarDatosUsuario()">Registrarse</button>
-      <button class="cancelar" onclick="cancelar()">Cancelar</button>
+      <div class="fechaNacimiento">
+        <div>
+          <label for="fechaNacimiento">Fecha de nacimiento:</label>
+        </div>
+        <div>
+          <input type="date" name="fechaNacimiento" id="fechaNacimiento" />
+        </div>
+      </div>
+      <div class="botones">
+        <button class="registro" onclick="registrarDatosUsuario()">Registrarse</button>
+        <button class="cancelar" onclick="cancelar()">Cancelar</button>
+      </div>
     </div>
-  <script src="index.js"></script>
-  </body>
-  </html>
+
+  </div>
+<script src="index.js"></script>
+</body>
+</html>
